@@ -13,7 +13,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY", "sk-proj-b-vk5IJlG-X4STuFUu-CW3fuig
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Replace with your React app origin
+    allow_origins=["https://comfy-croissant-6c68a3.netlify.app/"],  # Replace with your React app origin
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
