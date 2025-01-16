@@ -13,10 +13,11 @@ openai.api_key = os.getenv("OPENAI_API_KEY", "sk-proj-b-vk5IJlG-X4STuFUu-CW3fuig
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://comfy-croissant-6c68a3.netlify.app/"],  # Replace with your React app origin
+    allow_origins=["comfy-croissant-6c68a3.netlify.app"],  # Replace with your Netlify URL
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "OPTIONS"],  # Explicitly allow OPTIONS
     allow_headers=["*"],
+    max_age=3600,  # Cache preflight requests for 1 hour
 )
 
 # Our CSV has a column 'Map_Details' with lat/long in the format:
