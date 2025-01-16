@@ -128,7 +128,7 @@ async def chat_endpoint(request: MessageRequest):
     conversation_histor.append({"role": "user", "content": user_message})
     response = openai.chat.completions.create(
         model="gpt-4o-mini",  # Replace with "gpt-4" if you have access
-        messages=conversation_histor,
+        messages=conversation_history,
         max_tokens=1000,
         temperature=0.7
     )
